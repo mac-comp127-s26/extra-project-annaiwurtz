@@ -3,7 +3,7 @@ import edu.macalester.graphics.Ellipse;
 import java.awt.Color;
 
 public class Bird {
-    public static final int BIRD_DIAMETER = 60;
+    public static final int BIRD_DIAMETER = 55;
     private double x;
     private double y;
     private double vy = 0;
@@ -27,6 +27,10 @@ public class Bird {
         vy = -10;
     }
 
+    public void die() {
+        vy = 0;
+    }
+    
     public void stop() {
         vy = 0;
         ay = 0;
